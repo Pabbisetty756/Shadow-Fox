@@ -1,328 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopEase Pro - E-Commerce UX Enhancement</title>
 
-  <meta
-    name="description"
-    content="Pabbisetty Monisha Portfolio - CSE Student and aspiring Software Developer."
-  />
+<link rel="stylesheet" href="style.css">
 
-  <meta
-    name="keywords"
-    content="Pabbisetty Monisha, Portfolio, HTML, CSS, Java, Python, CSE Student"
-  />
-
-  <meta name="author" content="Pabbisetty Monisha " />
-
-  <title>Pabbisetty Monisha  | Portfolio</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
 <body>
 
-  <!-- Skip Link -->
-  <a href="#main-content" class="skip-link">
-    Skip to Main Content
-  </a>
+<!-- HERO SECTION -->
 
-  <!-- HEADER -->
-  <header>
+<header class="hero">
 
-    <div class="container">
+<nav>
 
-      <h1 class="logo">
-        Monisha
-      </h1>
+<h2 class="logo">
+<i class="fa-solid fa-cart-shopping"></i>
+ShopEase Pro
+</h2>
 
-      <nav aria-label="Main Navigation">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#cart-section">Cart</a></li>
+<li><a href="#checkout">Checkout</a></li>
+</ul>
 
-        <ul class="nav-links">
+<div class="cart-icon">
 
-          <li><a href="#home">Home</a></li>
+<i class="fa-solid fa-cart-shopping"></i>
 
-          <li><a href="#about">About</a></li>
+<span id="cartCount">0</span>
 
-          <li><a href="#skills">Skills</a></li>
+</div>
 
-          <li><a href="#projects">Projects</a></li>
+</nav>
 
-          <li><a href="#contact">Contact</a></li>
+<div class="hero-content">
 
-        </ul>
+<h1>Smart Shopping Experience</h1>
 
-      </nav>
+<p>
+Discover trending products with advanced
+filtering, sorting and seamless checkout.
+</p>
 
-    </div>
+<a href="#products" class="btn">
+Shop Now
+</a>
 
-  </header>
+</div>
 
-  <!-- MAIN -->
-  <main id="main-content">
+</header>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
+<!-- FILTERS -->
 
-      <div class="hero-content">
+<section class="filter-section">
 
-        <p class="small-title">
-          HELLO, I'M
-        </p>
+<h2>Find Your Product</h2>
 
-        <h2>
-          Pabbisetty Monisha
-        </h2>
+<div class="filters">
 
-        <h3>
-          CSE Student & Aspiring Software Developer
-        </h3>
+<input
+type="text"
+id="searchInput"
+placeholder="Search products...">
 
-        <p class="hero-text">
+<select id="categoryFilter">
 
-          Passionate about building responsive,
-          accessible and modern web applications
-          with clean user experiences.
+<option value="all">All Categories</option>
 
-        </p>
+<option value="Electronics">
+Electronics
+</option>
 
-        <div class="hero-buttons">
+<option value="Fashion">
+Fashion
+</option>
 
-          <a href="#projects" class="btn">
-            View Projects
-          </a>
+<option value="Home">
+Home
+</option>
 
-          <a href="#contact" class="btn-outline">
-            Contact Me
-          </a>
+<option value="Accessories">
+Accessories
+</option>
 
-        </div>
+</select>
 
-      </div>
+<select id="priceFilter">
 
-    </section>
+<option value="all">
+All Prices
+</option>
 
-    <!-- ABOUT -->
-    <section id="about">
+<option value="500">
+Below ₹500
+</option>
 
-      <div class="container">
+<option value="1000">
+Below ₹1000
+</option>
 
-        <h2 class="section-title">
-          About Me
-        </h2>
+<option value="2000">
+Below ₹2000
+</option>
 
-        <div class="glass-card">
+<option value="5000">
+Below ₹5000
+</option>
 
-          <p>
+</select>
 
-            I am Pabbisetty Monisha ,
-            a B.Tech CSE student from
-            Vignan Lara Institute of Technology and Science.
+<select id="sortFilter">
 
-          </p>
+<option value="default">
+Sort Products
+</option>
 
-          <p>
+<option value="low">
+Price Low to High
+</option>
 
-            I have completed my second year and
-            I am highly interested in software development,
-            frontend design, and accessible web technologies.
+<option value="high">
+Price High to Low
+</option>
 
-          </p>
+<option value="rating">
+Highest Rated
+</option>
 
-          <p>
+<option value="name">
+Name A-Z
+</option>
 
-            My career goal is to become a professional
-            Software Developer and create impactful digital solutions.
+</select>
 
-          </p>
+</div>
 
-        </div>
+</section>
 
-      </div>
+<!-- PRODUCTS -->
 
-    </section>
+<section id="products">
 
-    <!-- SKILLS -->
-    <section id="skills">
+<h2 class="section-title">
+Featured Products
+</h2>
 
-      <div class="container">
+<div id="productContainer"
+class="product-grid">
 
-        <h2 class="section-title">
-          Skills
-        </h2>
+</div>
 
-        <div class="skills-grid">
+</section>
 
-          <div class="skill-card">HTML5</div>
+<!-- WISHLIST -->
 
-          <div class="skill-card">CSS3</div>
+<section class="wishlist-section">
 
-          <div class="skill-card">Python</div>
+<h2>
+❤️ Wishlist
+</h2>
 
-          <div class="skill-card">Java</div>
+<div id="wishlistContainer">
 
-          <div class="skill-card">SQL Basics</div>
+No items in wishlist
 
-        </div>
+</div>
 
-      </div>
+</section>
 
-    </section>
+<!-- CART -->
 
-    <!-- PROJECTS -->
-    <section id="projects">
+<section id="cart-section">
 
-      <div class="container">
+<h2 class="section-title">
+Shopping Cart
+</h2>
 
-        <h2 class="section-title">
-          Projects
-        </h2>
+<div class="cart-container">
 
-        <div class="project-card">
+<div id="cartItems">
 
-          <h3>
-            Workout Tracker
-          </h3>
+Cart is Empty
 
-          <p>
+</div>
 
-            A workout tracker platform developed using
-            HTML, CSS, and JavaScript.
+<div class="cart-summary">
 
-          </p>
+<h3>Order Summary</h3>
 
-          <p>
+<p>
+Items:
+<span id="itemCount">
+0
+</span>
+</p>
 
-            using this everyone can track their daily fitness activities to achieve a healthy lifestyle,
-            it hepls in tracking their fitness activities.
+<p>
+Subtotal:
+₹<span id="subtotal">
+0
+</span>
+</p>
 
-          </p>
+<p>
+Discount:
+₹<span id="discount">
+0
+</span>
+</p>
 
-          <p>
+<h3>
+Total:
+₹<span id="total">
+0
+</span>
+</h3>
 
-        we have multiple options like food intake, calories taken, steps walked, exercise done and bmi caluclator.
-        this is ues for tracking purposes..    
-        
+<input
+type="text"
+id="couponInput"
+placeholder="Coupon Code">
 
-          </p>
+<button id="applyCoupon">
+Apply Coupon
+</button>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact">
+<!-- CHECKOUT -->
 
-      <div class="container">
+<section id="checkout">
 
-        <h2 class="section-title">
-          Contact Me
-        </h2>
+<h2 class="section-title">
+Checkout
+</h2>
 
-        <form class="contact-form" aria-label="Contact Form">
+<form id="checkoutForm">
 
-          <div class="form-group">
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required>
 
-            <label for="name">
-              Full Name
-            </label>
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+required>
 
-            <input
-              type="text"
-              id="name"
-              required
-            />
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
 
-          </div>
+<textarea
+id="address"
+placeholder="Delivery Address"
+required></textarea>
 
-          <div class="form-group">
+<select id="payment">
 
-            <label for="email">
-              Email Address
-            </label>
+<option>
+Cash on Delivery
+</option>
 
-            <input
-              type="email"
-              id="email"
-              required
-            />
+<option>
+UPI
+</option>
 
-          </div>
+<option>
+Credit Card
+</option>
 
-          <div class="form-group">
+<option>
+Debit Card
+</option>
 
-            <label for="message">
-              Message
-            </label>
+</select>
 
-            <textarea
-              id="message"
-              rows="5"
-              required
-            ></textarea>
+<button type="submit">
+Place Order
+</button>
 
-          </div>
+</form>
 
-          <button type="submit">
-            Send Message
-          </button>
+</section>
 
-        </form>
+<!-- TOAST -->
 
-        <div class="contact-info">
+<div id="toast">
+Notification
+</div>
 
-          <p>
-            Email:
-            <a href="mailto:pmonisha756@gmail.com">
-              pmonisha756@gmail.com
-            </a>
-          </p>
+<!-- FOOTER -->
 
-          <p>
-            LinkedIn:
-            <a
-              href="https://www.linkedin.com/in/pabbisetty-monisha-9013b9373"
-              target="_blank"
-            >
-              View Profile
-            </a>
-          </p>
+<footer>
 
-        </div>
+<h3>ShopEase Pro</h3>
 
-      </div>
+<p>
+Advanced E-Commerce UX Enhancement Project
+</p>
 
-    </section>
+<div class="socials">
 
-  </main>
+<i class="fab fa-facebook"></i>
 
-  <!-- FOOTER -->
-  <footer>
+<i class="fab fa-instagram"></i>
 
-    <p>
-      © 2026 Pabbisetty Monisha .
-      All Rights Reserved.
-    </p>
+<i class="fab fa-twitter"></i>
 
-  </footer>
+<i class="fab fa-linkedin"></i>
+
+</div>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
